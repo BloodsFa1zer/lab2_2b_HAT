@@ -267,19 +267,13 @@ void userManagementMode() {
             case 5:
                 cout << "enter the value you want to insert" << endl;
                 cin >> value;
-                cout << "enter the position where you want value to be inserted" << endl;
-                cin >> position;
-                addElementToNodeAtPosition(hat, value, position);
+                addElementToNodeAtPosition(hat, value, getIntInput("enter the position where you want value to be inserted", 1, countElements(hat)));
                 break;
             case 6:
-                cout << "enter the position of element you want to delete" << endl;
-                cin >> position;
-                deleteElementAtPosition(hat, position);
+                deleteElementAtPosition(hat, getIntInput("enter the position where you want value to be deleted:\n", 1, countElements(hat)));
                 break;
             case 7:
-                cout << "enter the index of element you want to get access to" << endl;
-                cin >> position;
-                cout << "Element at index" << position << ": " << accessByIndex(hat, position) << endl;
+                cout << "Element at index" << position << ": " << accessByIndex(hat, getIntInput("enter the index of element you want to get access to:\n", 1, countElements(hat))) << endl;
                 break;
             case 8:
                 cout << "enter the value you want to find" << endl;
